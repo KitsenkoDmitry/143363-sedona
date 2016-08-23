@@ -3,29 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Седона. Отели</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" >
   </head>
   <body>
     <div class="layout-positioner">
-      <header class="header">
-        <ul>
-          <li>Информация</li>
-          <li>Фото и видео</li>
+      <header class="header clearfix">
+        <ul class="header-menu-left clearfix">
+          <li>
+            <a href="#">Информация</a>
+          </li>
+          <li>
+            <a href="#">Фото и видео</a>
+          </li>
         </ul>
-        <div>
-          <a href="index.html">
-            <img src="img/logo.png" alt="Логотип" width="138" height="70" />
-          </a>
+        <div class="header-logo">
+          <img src="img/logo.png" alt="Логотип" width="138" height="70" />
         </div>
-        <ul>
-          <li>Карта штата</li>
-          <li>Гостиницы</li>
+        <ul class="header-menu-right clearfix">
+          <li>
+            <a href="#">Карта штата</a>
+          </li>
+          <li>
+            <a href="#">Гостиницы</a>
+          </li>
         </ul>
       </header>
       <main>
-        <form class="filter" action="#" method="get">
-          <div class="filter-element">
-            <h3 class="filter-header">Инфраструктура:</h3>
+        <form class="filter clearfix" action="#" method="get">
+          <fieldset class="filter-block">
+            <legend>Инфраструктура:</legend>
             <ul>
               <li>
                 <input type="checkbox" name="infrastructure" id="swmpool" value="swmpool" checked>
@@ -40,9 +47,9 @@
                 <label for="wifi">Wi-fi</label>
               </li>
             </ul>
-          </div>
-          <div class="filter-element">
-            <h3 class="filter-header">Тип жилья:</h3>
+          </fieldset>
+          <fieldset class="filter-block">
+            <legend>Тип жилья:</legend>
             <ul>
               <li>
                 <input type="checkbox" name="property-type" id="hotel" value="hotel" checked>
@@ -57,17 +64,17 @@
                 <label for="wifi">Апартаменты</label>
               </li>
             </ul>
-          </div>
-          <div class="filter-element">
-            <h3 class="filter-header">Стоимость в сутки (Р):</h3>
+          </fieldset>
+          <fieldset class="filter-block">
+            <legend>Стоимость в сутки (Р):</legend>
             <div class="filter-bounds">
               <span>От 0</span>
               <span>До 3000</span>
             </div>
             <a class="filter-btn" href="#">Показать</a>
-          </div>
+          </fieldset>
         </form>
-        <div class="sort-block">
+        <div class="sort-block clearfix">
           <div class="sort-result">
             Найдено: <span>3</span>
           </div>
@@ -90,8 +97,8 @@
             <button class="sort-arrow" type="button" name="down"></button>
           </div>
         </div>
-        <div class="sort-result-item">
-          <div class="sort-img">
+        <div class="sort-result-item clearfix">
+          <div class="sort-result-img">
             <img src="img/hotel1.jpg" alt="Amara-Resort" width="135" height="90" />
           </div>
           <div class="sort-result-text">
@@ -123,8 +130,8 @@
             <span>Рейтинг: 8.5</span>
           </div>
         </div>
-        <div class="sort-result-item">
-          <div class="sort-img">
+        <div class="sort-result-item clearfix">
+          <div class="sort-result-img">
             <img src="img/hotel2.jpg" alt="desert-quall" width="135" height="90" />
           </div>
           <div class="sort-result-text">
@@ -150,12 +157,12 @@
             <span>Рейтинг: 8.9</span>
           </div>
         </div>
-        <div class="sort-result-item">
-          <div class="sort-img">
+        <div class="sort-result-item clearfix">
+          <div class="sort-result-img">
             <img src="img/hotel3.jpg" alt="villas-at-poco" width="135" height="90" />
           </div>
           <div class="sort-result-text">
-            <h2>Villas at Poco Diablo</h2>\
+            <h2>Villas at Poco Diablo</h2>
             <div>
               <span>Апартаменты</span>
               <a class="sort-result-more" href="#">Подробнее</a>
@@ -163,7 +170,7 @@
             <div>
               <span>От 4000 р.</span>
               <a class="sort-result-book" href="#">Забронировать</a>
-            </span>
+            </div>
           </div>
           <div class="sort-result-raiting">
             <ul>
@@ -176,30 +183,31 @@
               <li>
                 <img src="http://placehold.it/10x10" alt="Star" />
               </li>
+            </ul>
             <span>Рейтинг: 9.2</span>
           </div>
         </div>
       </main>
-      <footer>
-      <div class="hash-tag">#visitsedona</div>
-      <ul class="social">
-        <li>
-          <a class="social-tw social-btn"></a>
-        </li>
-        <li>
-          <a class="social-fb social-btn"></a>
-        </li>
-        <li>
-          <a class="social-youtube social-btn"></a>
-        </li>
-      </ul>
-      <div class="copyright">
-        website by
-        <a href="#">
-          <img src="img/htmlacademy.png" alt="htmlAcademy" width="113" height="39" />
-        </a>
-      </div>
-    </footer>
+      <footer class="footer">
+        <div class="footer-hash-tag">#visitsedona</div>
+        <ul class="footer-social">
+          <li>
+            <a class="social-btn icon-twitter"></a>
+          </li>
+          <li>
+            <a class="social-btn icon-facebook"></a>
+          </li>
+          <li>
+            <a class="social-btn icon-youtube"></a>
+          </li>
+        </ul>
+        <div class="footer-copyright">
+          <span>website by</span>
+          <a href="#">
+            <img src="img/htmlacademy.png" alt="htmlAcademy" width="113" height="39" />
+          </a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

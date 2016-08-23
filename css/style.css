@@ -1,6 +1,9 @@
 body {
-  font-family: "PT Sans", "Arial", sans-serif;
-  color: #000;
+  margin: 0px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
   text-transform: uppercase;
 }
 
@@ -12,6 +15,333 @@ h2 {
 
 h3 {
   font-size: 21px;
-  line-height: 26px;
+  line-height: 21px;
   font-weight: bold;
+}
+
+.layout-positioner {
+  margin: 0 auto;
+  width: 1200px;
+  box-shadow: 0 0 15px #dbdbdb;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-content {
+  float: left;
+}
+
+.header-menu-left {
+  float: left;
+}
+
+.header-menu-left li {
+  float: left;
+  text-align: left;
+  width: 240px;
+}
+
+.header-menu-left li:first-child {
+  margin-left: 70px;
+}
+
+.header-menu-right {
+  float: right;
+}
+
+.header-menu-right li {
+  float: left;
+  text-align: right;
+  width: 240px;
+}
+
+.header-menu-right li:last-child {
+  margin-right: 70px;
+}
+
+.header-logo {
+   position: absolute;
+   left: 50%;
+   margin-left: -69px;
+}
+
+.main-banner {
+  background: url("../img/bg-shape.png") no-repeat 0 100%,
+              url("../img/sedona-bg.jpg") no-repeat 0% 22%;
+}
+
+.main-banner div {
+  padding-top: 75px;
+  padding-bottom: 80px;
+  padding-left: 372px;
+}
+
+.text {
+  padding-left: 300px;
+  padding-right: 300px;
+  text-align: center;
+}
+
+.text-header {
+  line-height: 26px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+}
+
+.text-paragraph {
+  margin-top: 0;
+  margin-bottom: 55px;
+}
+
+.feature {
+  font-size: 0px;
+  height: 256px;
+}
+
+.feature-content {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  font-size: 14px;
+  width: 400px;
+  background-color: #eeeeee;
+  color: #000;
+  height: 256px;
+}
+
+.feature-content h3 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.feature-content p {
+  margin-top: 25px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.feature-blue {
+  background-color: #81b3d2;
+  color: #fff;
+}
+
+.feature-image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.content {
+  font-size: 0px;
+}
+
+.content-item {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 60px;
+  padding-bottom: 85px;
+  width: 400px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.content-item h3 {
+  margin-top: 25px;
+  margin-bottom: 28px;
+}
+
+.content-item p {
+  margin: 0;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+.search-form {
+  display: none;
+}
+
+.btn {
+  font: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+
+}
+
+.brown-btn {
+  background-color: #766357;
+}
+
+.form-btn {
+  padding: 30px 140px;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.map {
+  margin-bottom: -120px;
+}
+
+.footer {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  font-size: 0px;
+  background-color: #ffffff;
+  opacity: 0.9;
+  text-align: center;
+}
+
+.footer-hash-tag {
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.footer-social {
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px;
+  padding: 0;
+}
+
+.footer-social li {
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+  margin-right: 6px;
+}
+
+.footer-social li:last-child {
+  margin-right: 0px;
+}
+
+.social-btn {
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  cursor: pointer;
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
+.footer-copyright {
+  display: inline-block;
+  vertical-align: middle;
+  width: 400px;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.footer-copyright span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.footer-copyright a {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.filter {
+  padding-left: 72px;
+  padding-right: 75px;
+  padding-top: 30px;
+  padding-bottom: 33px;
+
+  color:#ffffff;
+  background: #5f8bae url("../img/sedona-bg-filter.jpg") no-repeat 0 15%;
+}
+
+.filter-block {
+  float: left;
+  width: 240px;
+}
+
+.filter-block:last-of-type {
+  float: right;
+  width: 328px;
+}
+
+.sort-block {
+  padding-left: 72px;
+  padding-right: 75px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
+.sort-block div {
+  float: left;
+}
+
+.sort-block div:last-of-type {
+  float: right;
+}
+
+.sort-result {
+  width: 135px;
+  margin-right: 30px;
+}
+
+.sort-type span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sort-type ul {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sort-type li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 33px;
+}
+
+.sort-result-item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 72px;
+  padding-right: 75px;
+}
+
+.sort-result-img {
+  float: left;
+  width: 135px;
+  margin-right: 30px;
+}
+
+.sort-result-text {
+  float: left;
+}
+
+.sort-result-raiting {
+  float: right;
+}
+
+.sort-result-text h2 {
+  margin-top: 0px;
 }
