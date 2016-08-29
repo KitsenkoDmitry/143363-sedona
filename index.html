@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" >
   </head>
   <body>
@@ -25,7 +26,7 @@
             <a href="#">Карта штата</a>
           </li>
           <li>
-            <a href="#">Гостиницы</a>
+            <a href="catalog.html">Гостиницы</a>
           </li>
         </ul>
       </header>
@@ -102,34 +103,34 @@
         <div class="text">
           <h2 class="text-header">Заинтересовались?</h2>
           <p class="text-paragraph">
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
+            Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
-          <button class="btn brown-btn form-btn" type="button" name="hotel-search">Поиск гостиницы в Седоне</button>
-          <form class="search-form" action="#" method="post">
-            <label for="check-in">Дата заезда:</label>
-            <input type="date" name="check-in" id="check-in">
-            <span class="search-calendar">#</span>
-            <label for="check-out">Дата выезда:</label>
-            <input type="date" name="check-out" id="check-out">
-            <span class="search-calendar">#</span>
-            <div class="age">
-              <span>Взрослые:</span>
-              <div>
-                <button class="btn" type="button" name="minus">-</button>
-                <span>2</span>
-                <button class="btn" type="button" name="plus">+</button>
+          <div class="form-container">
+            <button class="form-btn" type="button" name="hotel-search">Поиск гостиницы в Седоне</button>
+            <form class="search-form" action="#" method="post">
+              <label for="check-in">Дата заезда:</label>
+              <input type="date" name="check-in" id="check-in">
+              <label for="check-out">Дата выезда:</label>
+              <input type="date" name="check-out" id="check-out">
+              <div class="search-age">
+                <label for="adults">Взрослые:</label>
+                <div>
+                  <button class="qty-btn" type="button" name="minus">-</button>
+                  <input type="number" name="adults" value="2" id="adults">
+                  <button class="qty-btn qty-btn-plus" type="button" name="plus">+</button>
+                </div>
               </div>
-            </div>
-            <div class="age">
-              <span>Дети:</span>
-              <div>
-                <button class="btn" type="button" name="minus">-</button>
-                <span>0</span>
-                <button class="btn" type="button" name="plus">+</button>
+              <div class="search-age clearfix">
+                <label for="children">Дети:</label>
+                <div>
+                  <button class="qty-btn" type="button" name="minus">-</button>
+                  <input type="number" name="children" value="0" id="children">
+                  <button class="qty-btn qty-btn-plus" type="button" name="plus">+</button>
+                </div>
               </div>
-            </div>
-            <button type="button" name="btn blue-btn search-btn"></button>
-          </form>
+              <button class="form-btn blue-btn" type="button" name="search">Найти</button>
+            </form>
+          </div>
         </div>
         <div class="map">
           <img src="img/map.jpg" alt="Карта" width="1200" height="593" />
@@ -150,9 +151,7 @@
         </ul>
         <div class="footer-copyright">
           <span>website by</span>
-          <a href="#">
-            <img src="img/htmlacademy.png" alt="htmlAcademy" width="113" height="39" />
-          </a>
+          <a href="#">htmlAcademy</a>
         </div>
       </footer>
     </div>

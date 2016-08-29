@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Седона. Отели</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" >
   </head>
   <body>
@@ -18,14 +19,16 @@
           </li>
         </ul>
         <div class="header-logo">
-          <img src="img/logo.png" alt="Логотип" width="138" height="70" />
+          <a href="index.html">
+            <img src="img/logo.png" alt="Логотип" width="138" height="70" />
+          </a>
         </div>
         <ul class="header-menu-right clearfix">
           <li>
             <a href="#">Карта штата</a>
           </li>
-          <li>
-            <a href="#">Гостиницы</a>
+          <li class="active">
+            <a>Гостиницы</a>
           </li>
         </ul>
       </header>
@@ -61,17 +64,28 @@
               </li>
               <li>
                 <input type="checkbox" name="property-type" id="apartments" value="apartments" checked>
-                <label for="wifi">Апартаменты</label>
+                <label for="apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-block">
             <legend>Стоимость в сутки (Р):</legend>
-            <div class="filter-bounds">
-              <span>От 0</span>
-              <span>До 3000</span>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="text" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                от <input type="text" name="max-price" value="3000">
+              </label>
             </div>
-            <a class="filter-btn" href="#">Показать</a>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toogle range-toogle-min"></div>
+              <div class="range-toogle range-toogle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
           </fieldset>
         </form>
         <div class="sort-block clearfix">
@@ -82,7 +96,7 @@
             <span>Сортировка:</span>
             <ul>
               <li>
-                <a href="#">По цене</a>
+                <a class="active" href="#">По цене</a>
               </li>
               <li>
                 <a href="#">По типу</a>
@@ -93,8 +107,8 @@
             </ul>
           </div>
           <div class="sort-btns">
-            <button class="sort-arrow" type="button" name="up"></button>
-            <button class="sort-arrow" type="button" name="down"></button>
+            <a class="arrow-btn icon-arrow-up">Up</a>
+            <a class="arrow-btn icon-arrow-down active">Down</a>
           </div>
         </div>
         <div class="sort-result-item clearfix">
@@ -102,30 +116,22 @@
             <img src="img/hotel1.jpg" alt="Amara-Resort" width="135" height="90" />
           </div>
           <div class="sort-result-text">
-            <h2>Amara Resort &amp; Spa</h2>
+            <h3>Amara Resort &amp; Spa</h3>
             <div>
               <span>Гостиница</span>
-              <a class="sort-result-more" href="#">Подробнее</a>
+              <a class="sort-result-btn blue-btn" href="#">Подробнее</a>
             </div>
             <div>
               <span>От 3500 р.</span>
-              <a class="sort-result-book" href="#">Забронировать</a>
+              <a class="sort-result-btn brown-btn" href="#">Забронировать</a>
             </div>
           </div>
           <div class="sort-result-raiting">
-            <ul>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
+            <ul class="clearfix">
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
             </ul>
             <span>Рейтинг: 8.5</span>
           </div>
@@ -135,24 +141,20 @@
             <img src="img/hotel2.jpg" alt="desert-quall" width="135" height="90" />
           </div>
           <div class="sort-result-text">
-            <h2>Desert Quall Inn</h2>
+            <h3>Desert Quall Inn</h3>
             <div>
               <span>Мотель</span>
-              <a class="sort-result-more" href="#">Подробнее</a>
+              <a class="sort-result-btn blue-btn" href="#">Подробнее</a>
             </div>
             <div>
               <span>От 2000 р.</span>
-              <a class="sort-result-book" href="#">Забронировать</a>
+              <a class="sort-result-btn brown-btn" href="#">Забронировать</a>
             </div>
           </div>
           <div class="sort-result-raiting">
-            <ul>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
+            <ul class="clearfix">
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
             </ul>
             <span>Рейтинг: 8.9</span>
           </div>
@@ -162,27 +164,21 @@
             <img src="img/hotel3.jpg" alt="villas-at-poco" width="135" height="90" />
           </div>
           <div class="sort-result-text">
-            <h2>Villas at Poco Diablo</h2>
+            <h3>Villas at Poco Diablo</h3>
             <div>
               <span>Апартаменты</span>
-              <a class="sort-result-more" href="#">Подробнее</a>
+              <a class="sort-result-btn blue-btn" href="#">Подробнее</a>
             </div>
             <div>
               <span>От 4000 р.</span>
-              <a class="sort-result-book" href="#">Забронировать</a>
+              <a class="sort-result-btn brown-btn" href="#">Забронировать</a>
             </div>
           </div>
           <div class="sort-result-raiting">
-            <ul>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
-              <li>
-                <img src="http://placehold.it/10x10" alt="Star" />
-              </li>
+            <ul class="clearfix">
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
+              <li class="icon-star"></li>
             </ul>
             <span>Рейтинг: 9.2</span>
           </div>
@@ -203,9 +199,7 @@
         </ul>
         <div class="footer-copyright">
           <span>website by</span>
-          <a href="#">
-            <img src="img/htmlacademy.png" alt="htmlAcademy" width="113" height="39" />
-          </a>
+          <a href="#">htmlAcademy</a>
         </div>
       </footer>
     </div>
