@@ -3,7 +3,6 @@ var popup = document.querySelector(".search-form");
 var popup_show = false;
 
 form_btn.addEventListener("click", function(event) {
-  event.preventDefault();
   if(!popup_show) {
     popup.classList.add("model-content-show");
     popup.classList.remove("model-content-close");

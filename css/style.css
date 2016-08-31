@@ -124,6 +124,7 @@ h3 {
 .text {
   max-width: 500px;
   margin: 0 auto;
+  padding-bottom: 50px;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -137,10 +138,14 @@ h3 {
   margin-top: 0;
 }
 
+.text h2 {
+  padding-top: 55px;
+  margin-bottom: 30px;
+}
+
 .text-paragraph {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-bottom: 55px;
+  margin: 0;
+  line-height: 24px;
 }
 
 .feature {
@@ -178,6 +183,10 @@ h3 {
   color: #fff;
 }
 
+.feature-blue h3 {
+  margin-top: 55px;
+}
+
 .feature-image {
   display: inline-block;
   vertical-align: top;
@@ -190,7 +199,7 @@ h3 {
 .content-item {
   display: inline-block;
   vertical-align: top;
-  padding-top: 60px;
+  padding-top: 58px;
   padding-bottom: 85px;
   width: 400px;
   font-size: 14px;
@@ -200,15 +209,12 @@ h3 {
 .content-item img {
   display: block;
   margin: 0 auto;
-}
-
-.content-item:last-of-type img {
-  margin-top: -5px;
+  height: 72px;
 }
 
 .content-item h3 {
-  margin-top: 25px;
-  margin-bottom: 28px;
+  margin-top: 29px;
+  margin-bottom: 25px;
 }
 
 .content-item p {
@@ -217,49 +223,54 @@ h3 {
   margin-right: 55px;
 }
 
-.form-container {
-  width: 567px;
-  margin: 0 auto;
-  position: relative;
-}
-
 .form-btn {
   position: relative;
   z-index: 10;
-  width: 100%;
+  display: block;
+  width: 567px;
+  margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
+
   font-family: inherit;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
   color: #ffffff;
   text-transform: uppercase;
+
   border: none;
   outline: none;
   cursor: pointer;
   background-color: #766357;
 }
 
+.form-container {
+  width: 567px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .search-form {
   padding: 55px;
   position: absolute;
   background-color: #fff;
-  top: -341px;
-  z-index: 5;
+  top: -400px;
 }
 
 .search-form label {
   font-weight: bold;
+  display: block;
+  padding-top: 10px;
+  margin-bottom: 38px;
 }
 
 .search-form input[type="text"] {
-  position: relative;
+  display: block;
   margin-bottom: 30px;
-  margin-left: 5px;
-  padding-left: 15px;
-  padding-right: 40px;
-  width: 300px;
+  padding-left: 5%;
+  padding-right: 13%;
+  width: 82%;
 
   font: inherit;
   font-weight: bold;
@@ -271,12 +282,42 @@ h3 {
   background-color: #f2f2f2;
 }
 
+.search-age {
+  float: left;
+  font-size: 0;
+}
+
+.search-age:last-of-type {
+  float: right;
+}
+
+.search-age label {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px;
+  margin-right: 26px;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+.search-age input[type="text"] {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  font-size: 14px;
+}
+
 .search-form .icon-calendar {
   position: absolute;
   right: 68px;
   top: 63px;
   width: 21px;
   height: 22px;
+  cursor: pointer;
   background: url("../img/sprite-icons.png") no-repeat -10px -190px;
 }
 
@@ -293,49 +334,18 @@ h3 {
   top: 135px;
 }
 
-.search-age {
+.search-form-left{
   float: left;
-  width:228px;
-  font-size: 0px;
+  width:24%;
 }
 
-.search-age:first-of-type label {
-  float: left;
-  padding-top: 10px;
-}
-
-.search-age:first-of-type label + div {
+.search-form-right{
   float: right;
-  padding-right: 13px;
+  width:76%;
+  margin-bottom: 25px;
 }
 
-.search-age:last-of-type label {
-  padding-top: 10px;
-  display: inline-block;
-}
-
-.search-age:last-of-type label + div {
-  float: right;
-}
-
-.search-age label {
-  font-size: 14px;
-}
-
-.search-age input[type="text"] {
-  padding: 0;
-  width: 38px;
-  height: 38px;
-  font: inherit;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  background-color: #f2f2f2;
-  border: none;
-  outline: none;
-}
-
-.search-age .qty-btn {
+ .qty-btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -386,6 +396,8 @@ h3 {
   margin-top: 25px;
   padding-top: 15px;
   padding-bottom: 15px;
+  z-index: 5;
+  width: 100%;
 }
 
 .brown-btn {
@@ -557,6 +569,7 @@ h3 {
 .filter-block legend {
   font-size: 16px;
   font-weight: bold;
+  margin-bottom: 6px;
 }
 
 .filter-block ul {
@@ -719,15 +732,16 @@ h3 {
   padding-left: 72px;
   padding-right: 75px;
   padding-top: 31px;
-  padding-bottom: 31px;
+  padding-bottom: 22px;
 }
 
 .sort-block div {
   float: left;
 }
 
-.sort-block div:last-of-type {
+.sort-block .sort-btns {
   float: right;
+  margin-top: 11px;
 }
 
 .sort-result {
@@ -799,7 +813,7 @@ h3 {
 }
 
 .icon-arrow-down {
-  margin-left: 12px;
+  margin-left: 7px;
   background-position: -10px -10px;
 }
 
@@ -821,7 +835,7 @@ h3 {
 
 .sort-result-item {
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   padding-left: 72px;
   padding-right: 75px;
   border-top: 1px solid #e5e5e5;
@@ -848,7 +862,7 @@ h3 {
 .sort-result-text h3 {
   margin: 0px;
   margin-top: -4px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   line-height: 26px;
   cursor: pointer;
 }
@@ -885,7 +899,7 @@ h3 {
 
 .sort-result-raiting ul {
   margin: 0;
-  margin-bottom: 47px;
+  margin-bottom: 39px;
   padding: 0;
 }
 
@@ -909,15 +923,27 @@ h3 {
 }
 
 @keyframes appearence {
-  0% { top: -341px; }
-  80% { top: 86px; }
-  90% { top: 70px; }
-  100% { top: 86px; }
+  0% {
+    top: -400px;
+  }
+  80% {
+    top: 0px;
+  }
+  90% {
+    top: -10px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 
 @keyframes disappearence {
-  0% { top: 86px; }
-  100% { top: -341px; }
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -400px;
+  }
 }
 
 .model-content-show {
