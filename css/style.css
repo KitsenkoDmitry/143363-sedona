@@ -106,7 +106,7 @@ h3 {
 .header-logo {
    position: absolute;
    left: 50%;
-   margin-left: -69px;
+   transform: translateX(-50%);
 }
 
 .main-banner {
@@ -124,7 +124,10 @@ h3 {
 .text {
   max-width: 500px;
   margin: 0 auto;
+  padding-top: 60px;
   padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
   position: relative;
   z-index: 10;
@@ -133,13 +136,12 @@ h3 {
 
 .text-header {
   line-height: 26px;
-  padding-top: 60px;
   margin-bottom: 32px;
   margin-top: 0;
 }
 
 .text h2 {
-  padding-top: 55px;
+  margin-top: -5px;
   margin-bottom: 30px;
 }
 
@@ -150,6 +152,8 @@ h3 {
 
 .feature {
   font-size: 0px;
+  color: #ffffff;
+  background-color: #81b3d2;
 }
 
 .feature-content {
@@ -157,70 +161,101 @@ h3 {
   z-index: 10;
   display: inline-block;
   vertical-align: top;
+  padding-top: 55px;
+  padding-bottom: 30px;
+  padding-left: 45px;
+  padding-right: 45px;
+  width: 33.333%;
   text-align: center;
   font-size: 14px;
-  width: 400px;
-  background-color: #eeeeee;
-  color: #000;
-  height: 256px;
+  box-sizing: border-box;
 }
 
-.feature-content h3 {
-  margin-top: 50px;
+.feature-title {
+  max-width: 160px;
+  margin: 0 auto 25px;
+}
+
+.feature-number {
+  position: relative;
+  display: block;
+  max-width: 30px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 25px;
-  margin-left: 100px;
-  margin-right: 100px;
 }
 
-.feature-content p {
-  margin-top: 25px;
-  margin-left: 45px;
-  margin-right: 45px;
+.feature-number::before,
+.feature-number::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 9px;
+  height: 1px;
+  background-color: #ffffff;
 }
 
-.feature-blue {
-  background-color: #81b3d2;
-  color: #fff;
+.feature-gray .feature-number::before,
+.feature-gray .feature-number::after {
+  background-color: #333333;
 }
 
-.feature-blue h3 {
-  margin-top: 55px;
+.feature-number::before {
+  left: 10px;
 }
+
+.feature-number::after {
+  right: 10px;
+}
+
+.feature-gray {
+  position: relative;
+  z-index: 10;
+  font-size: 0;
+  color: #333333;
+  background-color: #eeeeee;
+}
+
+.feature-gray .feature-content {
+  padding-top: 50px;
+  padding-bottom: 43px;
+}
+
 
 .feature-image {
   display: inline-block;
   vertical-align: top;
+  width: 800px;
+  height: 256px;
 }
 
 .content {
   font-size: 0px;
+  padding-top: 58px;
+  padding-bottom: 85px;
 }
 
 .content-item {
   display: inline-block;
   vertical-align: top;
-  padding-top: 58px;
-  padding-bottom: 85px;
-  width: 400px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  width: 33.333%;
   font-size: 14px;
   text-align: center;
 }
 
 .content-item img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 29px;
   height: 72px;
 }
 
 .content-item h3 {
-  margin-top: 29px;
   margin-bottom: 25px;
-}
-
-.content-item p {
-  margin: 0;
-  margin-left: 55px;
-  margin-right: 55px;
 }
 
 .form-btn {
@@ -246,23 +281,31 @@ h3 {
 }
 
 .form-container {
-  width: 567px;
-  margin: 0 auto;
   position: relative;
 }
 
 .search-form {
+  display: block;
+  width: 567px;
+  box-sizing: border-box;
   padding: 55px;
   position: absolute;
   background-color: #fff;
   top: -400px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .search-form label {
   font-weight: bold;
   display: block;
-  padding-top: 10px;
-  margin-bottom: 38px;
+  padding-top: 5px;
+  margin-bottom: 40px;
+  line-height: 26px;
+}
+
+.search-form label:last-child {
+  margin-bottom: 0;
 }
 
 .search-form input[type="text"] {
@@ -271,20 +314,29 @@ h3 {
   padding-left: 5%;
   padding-right: 13%;
   width: 82%;
-
+  height: 38px;
   font: inherit;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 38px;
-
   border: none;
   outline: none;
   background-color: #f2f2f2;
 }
 
+.search-form input[type="text"]:hover {
+  background-color: #ebebeb;
+}
+
+.search-form input[type="text"]:active,
+.search-form input[type="text"]:focus {
+  background-color: #ffffff;
+  outline: 2px solid #e5e5e5;
+}
+
 .search-age {
   float: left;
   font-size: 0;
+  margin-bottom: 18px;
 }
 
 .search-age:last-of-type {
@@ -298,6 +350,10 @@ h3 {
   margin-right: 26px;
   margin-top: 7px;
   font-size: 14px;
+}
+
+.search-age .left-age {
+  margin-right: 38px;
 }
 
 .search-age input[type="text"] {
@@ -336,16 +392,15 @@ h3 {
 
 .search-form-left{
   float: left;
-  width:24%;
+  width: 24%;
 }
 
 .search-form-right{
   float: right;
-  width:76%;
-  margin-bottom: 25px;
+  width: 76%;
 }
 
- .qty-btn {
+ .search-age .qty-btn {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -396,7 +451,6 @@ h3 {
   margin-top: 25px;
   padding-top: 15px;
   padding-bottom: 15px;
-  z-index: 5;
   width: 100%;
 }
 
@@ -463,7 +517,7 @@ h3 {
 }
 
 .footer-social li:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .social-btn {
@@ -472,6 +526,7 @@ h3 {
   width: 46px;
   height: 48px;
   background-color: #81b3d2;
+  cursor: pointer;
 }
 
 .social-btn::before {
@@ -531,14 +586,14 @@ h3 {
 .footer-copyright a {
   display: inline-block;
   vertical-align: middle;
-  font-size: 0px;
+  font-size: 0;
   width: 113px;
   height: 39px;
   background: url("../img/sprite-logo.png") no-repeat -5px -54px;
 }
 
 .footer-copyright a:hover {
-  background-position: -5px -103px;
+  background-position: -5px -102px;
 }
 
 .footer-copyright a:active {
@@ -686,7 +741,6 @@ h3 {
   top: -9px;
   width: 4px;
   height: 4px;
-
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -710,11 +764,9 @@ h3 {
   display: block;
   margin: 0 auto;
   padding: 6px 35px;
-
   font: inherit;
   color: inherit;
   text-transform: inherit;
-
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -778,7 +830,7 @@ h3 {
 
 .sort-type a {
   text-decoration: none;
-  color: #b2b2b2;
+  color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #81b3d2;
 }
 
@@ -801,9 +853,7 @@ h3 {
   vertical-align: top;
   width: 11px;
   height: 10px;
-
-  font-size: 0px;
-
+  font-size: 0;
   background: url("../img/sprite-icons.png") no-repeat;
   cursor: pointer;
 }
@@ -825,11 +875,13 @@ h3 {
   background-position: -10px -70px;
 }
 
-.icon-arrow-up:active, .sort-btns .active {
+.icon-arrow-up:active,
+.sort-btns .active {
   background-position: -10px -130px;
 }
 
-.icon-arrow-down:active, .sort-btns .active {
+.icon-arrow-down:active,
+.sort-btns .active {
   background-position: -10px -40px;
 }
 
@@ -916,7 +968,9 @@ h3 {
 }
 
 .sort-result-raiting span {
-  display: block;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
   padding: 6px 12px;
   color: #666666;
   background-color: #f2f2f2;
