@@ -106,7 +106,8 @@ h3 {
 .header-logo {
    position: absolute;
    left: 50%;
-   transform: translateX(-50%);
+   -webkit-transform: translateX(-50%);
+           transform: translateX(-50%);
 }
 
 .main-banner {
@@ -177,37 +178,9 @@ h3 {
 }
 
 .feature-number {
-  position: relative;
   display: block;
-  max-width: 30px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-bottom: 25px;
-}
-
-.feature-number::before,
-.feature-number::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  display: block;
-  width: 9px;
-  height: 1px;
-  background-color: #ffffff;
-}
-
-.feature-gray .feature-number::before,
-.feature-gray .feature-number::after {
-  background-color: #333333;
-}
-
-.feature-number::before {
-  left: 10px;
-}
-
-.feature-number::after {
-  right: 10px;
 }
 
 .feature-gray {
@@ -273,6 +246,8 @@ h3 {
   line-height: 26px;
   color: #ffffff;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 
   border: none;
   outline: none;
@@ -293,7 +268,8 @@ h3 {
   background-color: #fff;
   top: -400px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .search-form label {
@@ -420,7 +396,8 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 12px;
   height: 3px;
   background-color: #a9a9a9;
@@ -431,7 +408,8 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 3px;
   height: 12px;
   background-color: #a9a9a9;
@@ -482,6 +460,7 @@ h3 {
 
 .map {
   margin-bottom: -120px;
+  background: url("../img/map.jpg") no-repeat;
 }
 
 .footer {
@@ -489,8 +468,11 @@ h3 {
   padding-bottom: 35px;
   font-size: 0px;
   background-color: #ffffff;
-  opacity: 0.9;
   text-align: center;
+}
+
+.footer-main {
+  opacity: 0.9;
 }
 
 .footer-hash-tag {
@@ -534,7 +516,8 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-image: url("../img/sprite-icons.png");
   background-repeat: no-repeat;
 }
@@ -589,15 +572,15 @@ h3 {
   font-size: 0;
   width: 113px;
   height: 39px;
-  background: url("../img/sprite-logo.png") no-repeat -5px -54px;
+  background: url("../img/sprite-logo.png") no-repeat -5px -5px;
 }
 
 .footer-copyright a:hover {
-  background-position: -5px -102px;
+  background-position: -5px -103px;
 }
 
 .footer-copyright a:active {
-  background-position: -5px -5px;
+  background-position: -5px -54px;
 }
 
 .filter {
@@ -690,7 +673,8 @@ h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   height: 22px;
   width: 2px;
   background-color: #ffffff;
@@ -712,6 +696,7 @@ h3 {
 
 .price-controls input {
   width: 50px;
+  height: 38px;
   margin: 0;
   color: inherit;
   font: inherit;
@@ -818,8 +803,8 @@ h3 {
 .sort-type ul {
   display: inline-block;
   vertical-align: bottom;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .sort-type li {
@@ -976,6 +961,21 @@ h3 {
   background-color: #f2f2f2;
 }
 
+@-webkit-keyframes appearence {
+  0% {
+    top: -400px;
+  }
+  80% {
+    top: 0px;
+  }
+  90% {
+    top: -10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
 @keyframes appearence {
   0% {
     top: -400px;
@@ -991,6 +991,15 @@ h3 {
   }
 }
 
+@-webkit-keyframes disappearence {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -400px;
+  }
+}
+
 @keyframes disappearence {
   0% {
     top: 0px;
@@ -1001,15 +1010,23 @@ h3 {
 }
 
 .model-content-show {
-  animation-name: appearence;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: appearence;
+          animation-name: appearence;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .model-content-close {
-  animation-name: disappearence;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.25, -0.49, 0.75, 0.72);
-  animation-fill-mode: forwards;
+  -webkit-animation-name: disappearence;
+          animation-name: disappearence;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.25, -0.49, 0.75, 0.72);
+          animation-timing-function: cubic-bezier(0.25, -0.49, 0.75, 0.72);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
