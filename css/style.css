@@ -625,6 +625,7 @@ h3 {
 
 .filter-block input[type="checkbox"] + label {
   display: inline-block;
+  vertical-align: top;
   margin: 14px 0;
   padding-left: 40px;
   cursor: pointer;
