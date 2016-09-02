@@ -42,8 +42,8 @@ h3 {
 }
 
 .header li {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .header a {
@@ -112,7 +112,7 @@ h3 {
 
 .main-banner {
   background: url("../img/bg-shape.png") no-repeat 0 100%,
-              #376e96 url("../img/sedona-bg.jpg") no-repeat 0% 22%;
+              #376e96 url("../img/sedona-bg.jpg") no-repeat 0% 21%;
 }
 
 .main-banner img {
@@ -126,7 +126,7 @@ h3 {
   max-width: 500px;
   margin: 0 auto;
   padding-top: 60px;
-  padding-bottom: 50px;
+  padding-bottom: 51px; /*чтобы форма не проявлялась при анимации*/
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
@@ -135,9 +135,13 @@ h3 {
   background-color: #ffffff;
 }
 
+.text-with-form {
+  padding-bottom: 45px;
+}
+
 .text-header {
   line-height: 26px;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
   margin-top: 0;
 }
 
@@ -180,7 +184,7 @@ h3 {
 .feature-number {
   display: block;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .feature-gray {
@@ -206,8 +210,8 @@ h3 {
 
 .content {
   font-size: 0px;
-  padding-top: 58px;
-  padding-bottom: 85px;
+  padding-top: 60px;
+  padding-bottom: 68px;
 }
 
 .content-item {
@@ -459,14 +463,14 @@ h3 {
 }
 
 .map {
-  margin-bottom: -120px;
+  margin-bottom: -126px;
   background: url("../img/map.jpg") no-repeat;
 }
 
 .footer {
   padding-top: 35px;
-  padding-bottom: 35px;
-  font-size: 0px;
+  padding-bottom: 37px;
+  font-size: 0;
   background-color: #ffffff;
   text-align: center;
 }
@@ -478,7 +482,7 @@ h3 {
 .footer-hash-tag {
   display: inline-block;
   vertical-align: middle;
-  width: 400px;
+  width: 33.333%;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -487,7 +491,7 @@ h3 {
 .footer-social {
   display: inline-block;
   vertical-align: middle;
-  width: 400px;
+  width: 33.333%;
   padding: 0;
 }
 
@@ -555,7 +559,7 @@ h3 {
 .footer-copyright {
   display: inline-block;
   vertical-align: middle;
-  width: 400px;
+  width: 33.333%;
   font-size: 14px;
   line-height: 26px;
 }
@@ -875,7 +879,7 @@ h3 {
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 72px;
-  padding-right: 75px;
+  padding-right: 72px;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -923,10 +927,10 @@ h3 {
   display: block;
   padding-left: 17px;
   padding-right: 17px;
-  padding-top: 6px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 4px;
   margin-right: 2px;
-  margin-top: 9px;
+  margin-top: 16px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -937,7 +941,7 @@ h3 {
 
 .sort-result-raiting ul {
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 45px;
   padding: 0;
 }
 
@@ -957,7 +961,7 @@ h3 {
   display: inline-block;
   vertical-align: top;
   float: right;
-  padding: 6px 12px;
+  padding: 4px 12px;
   color: #666666;
   background-color: #f2f2f2;
 }
